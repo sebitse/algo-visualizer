@@ -1,4 +1,5 @@
-# Makefile section
+# Makefile file
+# Needs to complete the paths marked to compile the project
 
 # Compiler
 CXX = g++

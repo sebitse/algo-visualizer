@@ -1,7 +1,11 @@
-#include <iostream>
+#include "../AlgoVisulizer.h"
+
+int main(void) {
+    AlgoVisulizer visual;
+
+    visual.init();
+    visual.insertionSort();
 
 
-int main(void)
-{
     return 0;
 }

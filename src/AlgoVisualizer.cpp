@@ -71,7 +71,9 @@ void AlgoVisulizer::render(uint8_t red, uint8_t blue)
 
     // Update and set a delay for the screen
     SDL_RenderPresent(renderer);
-    SDL_Delay(10);
+    
+    SDL_Event ev;
+    SDL_WaitEventTimeout(&ev, DELAY);
 }
 int16_t AlgoVisulizer::nrLines()
 {

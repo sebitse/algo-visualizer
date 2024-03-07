@@ -19,7 +19,8 @@ void AlgoVisulizer::insertionSort()
         }
         lines[j + 1] = key;
     }
-    SDL_Delay(MAX_DELAY);
+    SDL_Event ev;
+    SDL_WaitEventTimeout(&ev, MAX_DELAY);
 }
 void AlgoVisulizer::bubbleSort()
 {
@@ -42,7 +43,8 @@ void AlgoVisulizer::bubbleSort()
         if (!swapped) 
             break;
     }
-    SDL_Delay(MAX_DELAY);
+    SDL_Event ev;
+    SDL_WaitEventTimeout(&ev, MAX_DELAY);
 }
 
 int16_t AlgoVisulizer::partition(std::vector<uint8_t>& arr, int16_t low, int16_t high) 
@@ -73,6 +75,10 @@ void AlgoVisulizer::quickSort(int16_t low, int16_t high)
         quickSort(low, pi - 1); // Sort elements before partition
         quickSort(pi + 1, high); // Sort elements after partition
     }
+    /*
+    SDL_Event ev;
+    SDL_WaitEventTimeout(&ev, MAX_DELAY);
+    */
 }
 void AlgoVisulizer::selectionSort()
 {
@@ -92,7 +98,8 @@ void AlgoVisulizer::selectionSort()
             render(i, minIndex);
         }
     }
-    SDL_Delay(MAX_DELAY);
+    SDL_Event ev;
+    SDL_WaitEventTimeout(&ev, MAX_DELAY);
 }
 /*
 void AlgoVisulizer::heapify(uint8_t n, uint8_t i)

@@ -18,7 +18,8 @@
 #define HEIGHT 1000
 #define RECTANGLE WIDTH, HEIGHT
 #define SCALE 10., 10.
-#define MAX_DELAY 1000
+#define MAX_DELAY 1200
+#define DELAY 12
 
 class AlgoVisulizer
 {

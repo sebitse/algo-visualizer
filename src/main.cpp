@@ -7,9 +7,9 @@ int main(void)
     // Setup
     visual.init();
 
-    //visual.insertionSort();
+    visual.insertionSort();
     //visual.bubbleSort();
-    visual.quickSort(ZERO, visual.nrLines());
+    //visual.quickSort(ZERO, visual.nrLines());
     //visual.selectionSort();
 
     return 0;

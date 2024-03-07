@@ -4,8 +4,8 @@ int main(void) {
     AlgoVisulizer visual;
 
     visual.init();
-    visual.insertionSort();
-
+    //visual.quickSort(0, visual.getLines().size());
+    visual.heapSort();
 
     return 0;
 }

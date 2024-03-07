@@ -29,15 +29,24 @@ private:
     void populate(uint8_t);
     void clear();
     void draw(uint8_t, uint8_t);
+    void render(uint8_t, uint8_t);
 public:
     AlgoVisulizer();
     ~AlgoVisulizer();
 
     void init();
-    void render(uint8_t, uint8_t);
 
     // Sorting Algorithms
     void insertionSort();
+    void bubbleSort();
+    void quickSort(int16_t, int16_t);
+    int16_t partition(std::vector<uint8_t>&, int16_t, int16_t);
+    void selectionSort();
+
+    /*
+    void heapify(uint8_t, uint8_t);
+    void heapSort();
+    */
 };
 
 

@@ -18,7 +18,7 @@ void AlgoVisulizer::populate(uint8_t population = 100)
     std::random_device random;
     std::uniform_int_distribution<> distrib(DISTRIBUTION_LIMITS);
 
-    for (uint8_t i = 0; i < population; ++i) 
+    for (uint8_t i = 0u; i < population; ++i) 
     {
         lines.push_back(distrib(random));
     }
@@ -45,7 +45,7 @@ void AlgoVisulizer::draw(uint8_t red, uint8_t blue)
 {
     // The two working lines are colored according to their index in the vector
 
-    uint8_t index = 0;
+    uint8_t index = 0u;
     for (uint8_t i : lines) 
     {
         if (index == red)
@@ -72,4 +72,64 @@ void AlgoVisulizer::render(uint8_t red, uint8_t blue)
     // Update and set a delay for the screen
     SDL_RenderPresent(renderer);
     SDL_Delay(10);
+}
+int16_t AlgoVisulizer::nrLines()
+{
+    return (int16_t)lines.size();
+}
+void AlgoVisulizer::start()
+{
+    int16_t choice = 0;
+
+    printOption();
+    do
+    {
+        std::cout << "\nChoice: " << std::endl;   
+        std::cin >> choice;
+    } while (choice);
+    
+    switch (choice)
+    {
+    case 0:
+        exit(EXIT_SUCCESS);
+        break;
+    case 1:
+        this->insertionSort();
+        break;
+    case 2:
+        this->bubbleSort();
+        break;
+    case 3:
+        this->quickSort(ZERO, lines.size());
+        break;
+    case 4:
+        this->selectionSort();
+        break;
+    default:
+        break;
+    }
+}
+
+// Auxiliar function
+void printOption()
+{
+    std::cout << "1 - InsertionSort" << std::endl;
+    std::cout << "2 - BubbleSort" << std::endl;
+    std::cout << "3 - QuickSort" << std::endl;
+    std::cout << "4 - SelectionSort" << std::endl;
+
+    std::cout << "0 - Exit" << std::endl;
+}
+bool isValid(uint8_t tested)
+{
+    // Checks if the choice is valid
+
+    uint8_t validChoices[] = {0, 1, 2, 3, 4};
+
+    for(uint8_t i : validChoices)
+    {
+        if(tested == i)
+            return true;
+    }
+    return false;
 }

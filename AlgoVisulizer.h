@@ -5,13 +5,14 @@
 #include <stdint.h>
 #include <SDL2/SDL.h>
 
-// MACRO
+// MACROS
 
 #define RED 255, 0, 0, 255
 #define BLUE 0, 0, 255, 255
 #define WHITE 255, 255, 255, 255
 #define BLACK 0, 0, 0, 255
 
+#define ZERO 0
 #define DISTRIBUTION_LIMITS 1, 99
 #define WIDTH 1000
 #define HEIGHT 1000
@@ -35,7 +36,10 @@ public:
     ~AlgoVisulizer();
 
     void init();
-    //void start();
+    void start();
+
+    // Getters
+    int16_t nrLines();
 
     // Sorting Algorithms
     void insertionSort();
@@ -50,5 +54,7 @@ public:
     */
 };
 
+// Auxiliar functions
 
-
+void printOption();
+bool isValid(uint8_t);

@@ -1,6 +1,7 @@
 #include "../AlgoVisulizer.h"
 
-void AlgoVisulizer::insertionSort() {
+void AlgoVisulizer::insertionSort() 
+{
 
     uint8_t n = (uint8_t)lines.size();
 
@@ -72,7 +73,6 @@ void AlgoVisulizer::quickSort(int16_t low, int16_t high)
         quickSort(low, pi - 1); // Sort elements before partition
         quickSort(pi + 1, high); // Sort elements after partition
     }
-    SDL_Delay(MAX_DELAY);
 }
 void AlgoVisulizer::selectionSort()
 {

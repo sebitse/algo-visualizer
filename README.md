@@ -6,11 +6,11 @@ It provides a visual representation of sorting algorithms to aid in understandin
 ## Features
 
 - Visualize the following sorting algorithms:
--- Insertion Sort
--- Bubble Sort
--- Quick Sort
--- Selection Sort
--- Heap Sort (under development)
+  - Insertion Sort
+  - Bubble Sort
+  - Quick Sort
+  - Selection Sort
+  - Heap Sort (under development)
 - Customize visualization parameters such as window size, delay between frames, and color scheme.
 
 ## Dependencies

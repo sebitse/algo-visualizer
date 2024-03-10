@@ -3,6 +3,9 @@
 Algorithm Visualizer is a C++ program that visualizes various sorting algorithms using the SDL2 graphics library. 
 It provides a visual representation of sorting algorithms to aid in understanding their operations and performance.
 
+## Note
+This project is inspired from a very famous video on YouTube[https://www.youtube.com/watch?v=kPRA0W1kECg].
+
 ## Features
 
 - Visualize the following sorting algorithms:

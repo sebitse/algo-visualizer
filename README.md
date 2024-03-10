@@ -23,7 +23,7 @@ It provides a visual representation of sorting algorithms to aid in understandin
 ```cd algorithm-visualizer```
 
 - Compile the program using a C++ compiler such as g++:
-```make```
+```make all```
 
 
 ## Usage

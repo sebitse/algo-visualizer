@@ -1,16 +1,16 @@
-#include "../AlgoVisulizer.h"
+#include "../AlgoVisualizer.h"
 
-AlgoVisulizer::AlgoVisulizer() 
+AlgoVisualizer::AlgoVisualizer() 
 {
     // Constructor implementation
 }
 
-AlgoVisulizer::~AlgoVisulizer() 
+AlgoVisualizer::~AlgoVisualizer() 
 {
     // Destructor implementation
 }
 
-void AlgoVisulizer::populate(uint8_t population = 100)
+void AlgoVisualizer::populate(uint8_t population = 100)
 {
     // A vector (lines) is populated with a fixed number of values 
     // generated according to a uniform distribution
@@ -23,7 +23,7 @@ void AlgoVisulizer::populate(uint8_t population = 100)
         lines.push_back(distrib(random));
     }
 }
-void AlgoVisulizer::init()
+void AlgoVisualizer::init()
 {
     // Populate the vector lines
     populate();
@@ -34,14 +34,14 @@ void AlgoVisulizer::init()
     // Set the drawing scale for rendering on the current target
     SDL_RenderSetScale(renderer, SCALE);
 }
-void AlgoVisulizer::clear()
+void AlgoVisualizer::clear()
 {
     // Set the background color to the default value(BLACK)
     // *Update the screen*
     SDL_SetRenderDrawColor(renderer, BLACK);
     SDL_RenderClear(renderer);
 }
-void AlgoVisulizer::draw(uint8_t red, uint8_t blue)
+void AlgoVisualizer::draw(uint8_t red, uint8_t blue)
 {
     // The two working lines are colored according to their index in the vector
 
@@ -61,7 +61,7 @@ void AlgoVisulizer::draw(uint8_t red, uint8_t blue)
         ++index; 
     }
 }
-void AlgoVisulizer::render(uint8_t red, uint8_t blue)
+void AlgoVisualizer::render(uint8_t red, uint8_t blue)
 {
     // Clear the screen
     clear();
@@ -75,37 +75,39 @@ void AlgoVisulizer::render(uint8_t red, uint8_t blue)
     SDL_Event ev;
     SDL_WaitEventTimeout(&ev, DELAY);
 }
-int16_t AlgoVisulizer::nrLines()
+int16_t AlgoVisualizer::nrLines()
 {
     return (int16_t)lines.size();
 }
-void AlgoVisulizer::start()
+void AlgoVisualizer::start()
 {
-    int16_t choice = 0;
+    uint8_t choice = 0;
 
     printOption();
     do
     {
         std::cout << "\nChoice: " << std::endl;   
         std::cin >> choice;
-    } while (choice);
-    
+    } while (isValid(choice));
+
+    init();
+
     switch (choice)
     {
-    case 0:
+    case '0':
         exit(EXIT_SUCCESS);
         break;
-    case 1:
-        this->insertionSort();
+    case '1':
+        insertionSort();
         break;
-    case 2:
-        this->bubbleSort();
+    case '2':
+        bubbleSort();
         break;
-    case 3:
-        this->quickSort(ZERO, lines.size());
+    case '3':
+        quickSort(ZERO, lines.size());
         break;
-    case 4:
-        this->selectionSort();
+    case '4':
+        selectionSort();
         break;
     default:
         break;

@@ -1,16 +1,10 @@
-#include "../AlgoVisulizer.h"
+#include "../AlgoVisualizer.h"
 
 int main(void) 
 {
-    AlgoVisulizer visual;
+    AlgoVisualizer algoVisualizer;
 
-    // Setup
-    visual.init();
-
-    visual.insertionSort();
-    //visual.bubbleSort();
-    //visual.quickSort(ZERO, visual.nrLines());
-    //visual.selectionSort();
+    algoVisualizer.start();
 
     return 0;
 }

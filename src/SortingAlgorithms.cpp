@@ -1,6 +1,6 @@
-#include "../AlgoVisulizer.h"
+#include "../AlgoVisualizer.h"
 
-void AlgoVisulizer::insertionSort() 
+void AlgoVisualizer::insertionSort() 
 {
 
     uint8_t n = (uint8_t)lines.size();
@@ -22,7 +22,7 @@ void AlgoVisulizer::insertionSort()
     SDL_Event ev;
     SDL_WaitEventTimeout(&ev, MAX_DELAY);
 }
-void AlgoVisulizer::bubbleSort()
+void AlgoVisualizer::bubbleSort()
 {
     uint8_t n = (uint8_t)lines.size();
     bool swapped;
@@ -47,7 +47,7 @@ void AlgoVisulizer::bubbleSort()
     SDL_WaitEventTimeout(&ev, MAX_DELAY);
 }
 
-int16_t AlgoVisulizer::partition(std::vector<uint8_t>& arr, int16_t low, int16_t high) 
+int16_t AlgoVisualizer::partition(std::vector<uint8_t>& arr, int16_t low, int16_t high) 
 {
     uint8_t pivot = arr[high]; // Choose the last element as the pivot
     int16_t i = low - 1; // Index of the smaller element
@@ -66,7 +66,7 @@ int16_t AlgoVisulizer::partition(std::vector<uint8_t>& arr, int16_t low, int16_t
     
     return i + 1;
 }
-void AlgoVisulizer::quickSort(int16_t low, int16_t high) 
+void AlgoVisualizer::quickSort(int16_t low, int16_t high) 
 {
     if (low < high) 
     {
@@ -80,7 +80,7 @@ void AlgoVisulizer::quickSort(int16_t low, int16_t high)
     SDL_WaitEventTimeout(&ev, MAX_DELAY);
     */
 }
-void AlgoVisulizer::selectionSort()
+void AlgoVisualizer::selectionSort()
 {
     uint8_t n = (uint8_t)lines.size();
 

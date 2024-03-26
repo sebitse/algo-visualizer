@@ -21,7 +21,7 @@
 #define MAX_DELAY 1200
 #define DELAY 12
 
-class AlgoVisulizer
+class AlgoVisualizer
 {
 private:
     std::vector<uint8_t> lines;
@@ -33,8 +33,8 @@ private:
     void draw(uint8_t, uint8_t);
     void render(uint8_t, uint8_t);
 public:
-    AlgoVisulizer();
-    ~AlgoVisulizer();
+    AlgoVisualizer();
+    ~AlgoVisualizer();
 
     void init();
     void start();

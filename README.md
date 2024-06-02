@@ -18,7 +18,7 @@ This project is inspired from a very famous video on [YouTube](https://www.youtu
 
 ## Dependencies
 
-- Ensure SDL2 is installed on your system. You can install it using your package manager or download it from the SDL website.
+- Ensure SDL2 is installed on your system. You can install it using your package manager or download it from the [SDL website](https://www.libsdl.org/).
 - Clone the repository to your local machine:
 ```git clone https://github.com/your-username/algorithm-visualizer.git```
 

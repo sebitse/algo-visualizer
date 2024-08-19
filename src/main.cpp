@@ -1,4 +1,4 @@
-#include "../AlgoVisualizer.h"
+#include "../headers/AlgoVisualizer.h"
 
 int main(void) 
 {

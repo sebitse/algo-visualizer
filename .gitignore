@@ -1,0 +1,70 @@
+# Ignore C++ build files
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.dylib
+*.so
+*.a
+*.lib
+*.dll
+
+# Ignore C++ debug files
+*.gch
+*.pch
+*.pdb
+*.ilk
+*.dSYM/
+*.stackdump
+*.core
+
+# Ignore compiled SDL2 libraries
+*.dll
+*.dylib
+*.so
+*.a
+
+# Ignore compiled resources
+*.res
+*.rc
+*.log
+
+# Ignore CMake-generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+Testing/
+CTestTestfile.cmake
+
+# Ignore generated project files
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.xcodeproj/
+*.xcworkspace/
+*.idea/
+*.vscode/
+
+# Ignore backup and temporary files
+*.bak
+*.tmp
+*.swp
+*.swo
+*.~*
+
+# Ignore SDL2 build files
+bin/
+obj/
+build/
+
+# Ignore user-specific files
+*.user
+*.session
+
+# Ignore configuration files
+*.DS_Store
+Thumbs.db
